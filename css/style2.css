@@ -1,0 +1,338 @@
+body {
+    overflow-x: hidden;
+}
+
+.section-items div div a {
+    text-decoration: none;
+    color: black;
+}
+
+#navHeader {
+    height: 53px;
+}
+
+.section-items a:hover, .section-items a:visited, .section-items a:active, .section-items a:focus {
+    color: black;
+    text-decoration: underline;
+}
+
+.color-orange {
+    color: #e83900 !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.logo-size {
+    width: 45px;
+    height: 35px;
+}
+
+#header-logo {
+    line-height: 40px;
+    font-family: Russo One;
+    margin-left: 7px;
+}
+
+.btn-orange {
+    color: #222;
+    border: solid 2px #e83900;
+    border-radius: 0px;
+}
+
+    .btn-orange:hover {
+        animation: all 0.3s ease;
+        background: #e83900;
+        color: white;
+    }
+
+.tag-small {
+    font-family: Russo One;
+    font-size: 9pt;
+}
+
+.logo-size-big {
+    width: 350px;
+    height: 300px;
+    margin-top: -210px;
+    z-index: 1;
+    position: absolute;
+    margin-left: -175px;
+}
+
+.card-body h5, .card-body h6 {
+    font-family: Russo One;
+}
+
+.card-body h5 {
+    border-bottom: solid 1px #111;
+    width: 100%;
+}
+
+    .card-body h5 small {
+        float: right;
+        color: #e83900;
+        font-size: 14pt;
+    }
+
+.card-body h4, .card-body s {
+    font-family: Russo One;
+    text-align: center;
+}
+
+form label {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size:10pt;
+}
+form button{
+    width:100%;
+}
+
+.product-image {
+    position: absolute;
+    width: 125px;
+    margin-top: -25px;
+    margin-left: -60px;
+}
+
+.font-cattivo {
+    font-family: Teko;
+    font-family: Permanent Marker;
+    font-size: 40pt;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo-size-big-fix {
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    margin-top: -200px;
+}
+
+.title-product {
+    margin-top: -90px;
+    padding-bottom: 110px;
+}
+
+.card-body article i {
+    font-size: 30pt;
+}
+
+.card-body article span {
+    vertical-align: top;
+    font-family: Oswald;
+    font-size: 16pt;
+    margin-left: 5px;
+}
+
+.card-body article strong {
+    float: right;
+    font-family: Oswald;
+    font-size: 12pt;
+    margin-top: 15px;
+}
+
+.triangol-space {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 200px solid #e83900;
+}
+
+    .triangol-space span {
+        color: #111;
+        font-size: 35pt;
+        font-family: Russo One;
+        position: absolute;
+        top: -160px;
+        right: 15px;
+        -webkit-transform: rotate(+47deg);
+    }
+
+    .triangol-space .fa-euro {
+        color: #111;
+        font-size: 18pt;
+        position: absolute;
+        top: -166px;
+        font-weight: bold;
+        right: 23px;
+        -webkit-transform: rotate(+46deg);
+    }
+
+.top-position {
+    vertical-align: top;
+    font-family: Russo One;
+    font-size: 9.5px;
+}
+
+.card-orange {
+    background: #e83900;
+    color: #222;
+    border: solid 2px #e83900;
+}
+
+.list-group-item {
+    border-radius: 0px !important;
+    padding: 3px;
+    padding-left: 6px;
+    text-transform: uppercase;
+    font-family: Russo One;
+    font-weight: 500;
+    text-decoration: none;
+    color: #222;
+}
+
+    .list-group-item:hover {
+        background: #e83900;
+        color: #222;
+        animation: all 0.3s ease-in-out;
+    }
+
+    .list-group-item a:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+.nav-item {
+    font-family: Russo One;
+    letter-spacing: 1px;
+    padding: 5px;
+    border: solid 1px #e83900;
+    text-align: center;
+    color: white;
+}
+
+.active {
+    background: #e83900 !important;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #e83900 !important;
+}
+
+.footer-shop {
+    padding: 10px;
+    height: 50px;
+}
+
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+    .jumbotron p:last-child {
+        margin-bottom: 0;
+    }
+
+.jumbotron-heading {
+    padding-top:20px;
+    font-weight: 300;
+    position: relative;
+    z-index: 999;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+    footer p {
+        margin-bottom: .25rem;
+    }
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/*OVERRIDE*/
+
+.btn-outline-orange {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff;
+}
+
+    .btn-outline-orange:hover {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-orange:focus, .btn-outline-orange.focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    }
+
+    .btn-outline-orange.disabled, .btn-outline-orange:disabled {
+        color: #007bff;
+        background-color: transparent;
+    }
+
+    .btn-outline-orange:not(:disabled):not(.disabled):active, .btn-outline-orange:not(:disabled):not(.disabled).active,
+    .show > .btn-outline-orange.dropdown-toggle {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-outline-orange:not(:disabled):not(.disabled):active:focus, .btn-outline-orange:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-outline-orange.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+        }
+
+.btn-outline-orange {
+    color: #e83900;
+    background-color: transparent;
+    background-image: none;
+    border-color: #e83900;
+}
+
+    .btn-outline-orange:hover {
+        color: #fff;
+        background-color: #e83900;
+        border-color: #e83900;
+    }
+
+    .btn-outline-orange:focus, .btn-outline-orange.focus {
+        box-shadow: 0 0 0 0.2rem rgba(232, 57, 0, 0.5);
+    }
+
+    .btn-outline-orange:not(:disabled):not(.disabled):active, .btn-outline-orange:not(:disabled):not(.disabled).active,
+    .show > .btn-outline-orange.dropdown-toggle {
+        color: #fff;
+        background-color: #e83900;
+        border-color: #e83900;
+    }
+
+        .btn-outline-orange:not(:disabled):not(.disabled):active:focus, .btn-outline-orange:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-outline-orange.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(232, 57, 0, 0.5);
+        }
+
+
+@media (min-width: 768px) {
+    .jumbotron {
+        padding-top: 200px;
+        padding-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .logo-size-big-fix {
+        width: 100px;
+    }
+}
