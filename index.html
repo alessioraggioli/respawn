@@ -1,120 +1,43 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Respawn Zone E-Commerce">
+    <meta name="author" content="Alessio Raggioli">
     <link rel="icon" href="https://getbootstrap.com/favicon.ico">
     <title>Respawn Shop</title>
-    <!-- Bootstrap core CSS -->
-    <link href="" rel="stylesheet">
-    <!-- Custom styles for this template -->
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/vue/vue.js"></script>
+
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/028b4fe5b3.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:300,400,500|Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:300,400,500|Russo+One|Assistant:300" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                </div>
-            </div>
-        </div>
-        <!--<div class="navbar navbar-dark bg-dark box-shadow">
-            <div class="container d-flex justify-content-between">
-                <a href="index2.html" class="navbar-brand d-flex align-items-center">
-                    <!--<img src="img/logo.png" class="logo-size" />-->
-                    <!--<span class="color-orange" id="header-logo">
-                        SHOP
-                    </span>
-                </a>
-                <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>-->
-    </header>
-    <main role="main">
+
+    <main role="main" id="app">
         <section class="jumbotron text-center">
-            <div class="container">
-                <img src="img/logo.png" class="logo-size-big" />
-                <h1 class="jumbotron-heading">Scopri i nostri prodotti</h1>
-                <p class="lead text-muted">Respawn Zone è partner ufficiale MSI ed oltre ad essere un gaming bar, è fornitore di attrezzature per PC da gaming ed altro ancora.</p>
-                <p>
-                    <a href="#" class="btn btn-orange col-xs-12 col-md-3 active">Tutto il negozio</a>
-                    <a href="#" class="btn btn-orange col-xs-12 col-md-3">Gaming PC</a>
-                    <a href="#" class="btn btn-orange col-xs-12 col-md-3">Componenti PC</a>
-                </p>
+            <div class="container home">
+                <img v-bind:src="img_path" class="logo-size-big animated flipInY"  />
+                <h1 class="jumbotron-heading animated zoomInUp">{{title1}}</h1>
+                <p class="lead animated zoomInUp">{{pageDescription}}</p>
+                <nav class="animated zoomIn">
+                    <nav-obj v-for="item in menuOptions"
+                               v-bind:nav="item"
+                               v-bind:key="item.id"
+                               v-bind:class="{active : item.active, navElements : 'navElements'}" >
+                    </nav-obj>
+                </nav>
             </div>
         </section>
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="img/pc/sharkoon.jpg">
-                            <div class="card-body">
-                                <h5>
-                                    The Smasher
-                                    <small>700€</small>
-                                </h5>
-                                <small class="color-orange top-position">assemblaggio incluso nel prezzo!</small>
-                                <p class="card-text card-description">Questo computer è il prodotto ideale per qualità/prezzo.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="pages/pc/smasher.html"><button type="button" class="btn btn-sm btn-outline-orange">Vai alla scheda</button></a>
-                                    </div>
-                                    <small class="text-muted tag-small"><i class="fa fa-tags"></i> GAMING PC</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="img/pc/sharkoon.jpg">
-                            <div class="card-body">
-                                <h5>
-                                    The Glitcher
-                                    <small>959€</small>
-                                </h5>
-                                <small class="color-orange top-position">assemblaggio incluso nel prezzo!</small>
-                                <p class="card-text card-description">Questo computer è il prodotto ideale per qualità/prezzo.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="pages/pc/glitcher.html"><button type="button" class="btn btn-sm btn-outline-orange">Vai alla scheda</button></a>
-                                    </div>
-                                    <small class="text-muted tag-small"><i class="fa fa-tags"></i> GAMING PC</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
     </main>
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Torna su</a>
-            </p>
-            <p>P.A.C. sas di Di Paolo Antonio Stefano & c. </p>
-            <p>Via Rigopiano, 23  65124 Pescara  p.iva 02161280686</p>
-        </div>
-    </footer>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Album example for Bootstrap_files/jquery-3.2.1.slim.min.js.download" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="./Album example for Bootstrap_files/popper.min.js.download"></script>
-    <script src="./Album example for Bootstrap_files/bootstrap.min.js.download"></script>
-    <script src="./Album example for Bootstrap_files/holder.min.js.download"></script>
-
-    <svg xmlns="http://www.w3.org/2000/svg" width="348" height="225" viewBox="0 0 348 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg>
+    <script src="js/vue.js"></script>
 </body>
 </html>
