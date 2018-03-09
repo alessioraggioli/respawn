@@ -1,0 +1,83 @@
+﻿<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-4 animated slideInUp">
+                <div class="card mb-4 box-shadow" style="min-height:100%;">
+                    <img v-bind:src="img_path" class="logo-size-small" title="Torna alla Home" />
+                    <hr />
+                    <nav class="aside-navigation">
+                        <h6>Tutte le categorie</h6><br />
+                        <aside-product v-for="element in catalog" v-bind:aside="element"></aside-product>
+                    </nav>
+                </div>
+            </aside>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 card mb-4 box-shadow animated flipInY" v-for="product in catalog">
+                        <img class="card-img-top" v-bind:src="product.image">
+                        <div class="card-body">
+                            <h5>
+                                {{product.name}}
+                                <small>{{product.price}}</small>
+                            </h5>
+                            <small class="color-orange top-position" v-show="product.assembly">{{assemblaggio}}</small>
+                            <p class="card-text card-description">{{product.description}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a v-bind:href="product.href">
+                                        <button type="button" class="btn btn-sm btn-outline-orange">Vai alla scheda</button>
+                                    </a>
+                                </div>
+                                <tag-obj v-bind:tag="product"
+                                         v-bind:key="product.id">
+                                </tag-obj>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/vue.js"></script>
+
+    <!--
+        <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="img/pc/sharkoon.jpg">
+                    <div class="card-body">
+                        <h5>
+                            The Smasher
+                            <small>700€</small>
+                        </h5>
+                        <small class="color-orange top-position">assemblaggio incluso nel prezzo!</small>
+                        <p class="card-text card-description">Questo computer è il prodotto ideale per qualità/prezzo.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="pages/pc/smasher.html"><button type="button" class="btn btn-sm btn-outline-orange">Vai alla scheda</button></a>
+                            </div>
+                            <small class="text-muted tag-small"><i class="fa fa-tags"></i> GAMING PC</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="img/pc/sharkoon.jpg">
+                    <div class="card-body">
+                        <h5>
+                            The Glitcher
+                            <small>959€</small>
+                        </h5>
+                        <small class="color-orange top-position">assemblaggio incluso nel prezzo!</small>
+                        <p class="card-text card-description">Questo computer è il prodotto ideale per qualità/prezzo.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="pages/pc/glitcher.html"><button type="button" class="btn btn-sm btn-outline-orange">Vai alla scheda</button></a>
+                            </div>
+                            <small class="text-muted tag-small"><i class="fa fa-tags"></i> GAMING PC</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        -->
