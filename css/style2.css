@@ -1,5 +1,10 @@
 body {
     overflow-x: hidden;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23171c16' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fff9f2' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23fff3e5' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ffecd9' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23ffe6cc' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23ffe0c0' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23ffdab3' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23ffd4a7' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23ffce9a' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23ffc88e' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ffc281' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ffbc75' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ffb668' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23ffb05b' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23ffaa4e' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23ffa440' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23ff9e31' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23ff981f' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 .section-items div div a {
@@ -24,9 +29,63 @@ body {
     font-weight: bold !important;
 }
 
-.logo-size {
-    width: 45px;
-    height: 35px;
+.logo-size-small {
+    margin-top: 15px;
+    width: 120px;
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:pointer;
+}
+
+.aside-navigation {
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height:15px;
+}
+
+    .aside-navigation h6 {
+        font-family: Russo One;
+    }
+
+    .aside-navigation p {
+        font-family: Assistant;
+    }
+
+.aside-tag {
+    font-family: Russo One;
+    font-size: 7pt;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: left;
+    border-left: solid 5px #111;
+    min-width:100px;
+}
+
+.aside-navigation p label {
+    background: #fff;
+    width: 175px;
+    margin-left: 5px;
+    padding-left: 10px;
+    font-family: Assistant;
+    color: black;
+    font-size: 11pt;
+    float:right;
+}
+
+.aside-navigation p label:hover {
+    text-decoration:underline;
+    cursor:pointer;
+}
+    .tag-pc {
+    background: #e83900;
+    color: white;
+}
+
+.tag-com {
+    background: #38ac3b;
+    color: white;
 }
 
 #header-logo {
@@ -53,12 +112,11 @@ body {
 }
 
 .logo-size-big {
-    width: 350px;
-    height: 300px;
-    margin-top: -210px;
-    z-index: 1;
-    position: absolute;
-    margin-left: -175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: -100px;
 }
 
 .card-body h5, .card-body h6 {
@@ -84,10 +142,11 @@ body {
 form label {
     font-family: Roboto;
     font-weight: bold;
-    font-size:10pt;
+    font-size: 10pt;
 }
-form button{
-    width:100%;
+
+form button {
+    width: 100%;
 }
 
 .product-image {
@@ -227,7 +286,8 @@ form button{
     padding-top: 20px;
     padding-bottom: 5px;
     margin-bottom: 0;
-    background-color: #fff;
+    background: transparent;
+    /*background-color: #fff;*/
 }
 
     .jumbotron p:last-child {
@@ -235,7 +295,7 @@ form button{
     }
 
 .jumbotron-heading {
-    padding-top:20px;
+    padding-top: 40px;
     font-weight: 300;
     position: relative;
     z-index: 999;
