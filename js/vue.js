@@ -64,7 +64,7 @@ $(function () {
 
         $("body").css("background", "#f8f9fa");
         $("#app").addClass("animated fadeIn");
-        $("#app").load("/pages/catalog.html");
+        $("#app").load("../pages/catalog.html");
         }, 750);
         
     });
